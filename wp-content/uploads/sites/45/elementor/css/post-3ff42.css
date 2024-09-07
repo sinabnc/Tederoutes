@@ -1,0 +1,131 @@
+.elementor-kit-3 {
+    --e-global-color-primary: #0084FF;
+    --e-global-color-secondary: #23252C;
+    --e-global-color-text: #868C9B;
+    --e-global-color-accent: #FFFFFF;
+    --e-global-color-35e0e26: #1D1F24;
+    --e-global-color-6d9743a: #FFFFFF;
+    --e-global-typography-primary-font-family: "Syne";
+    --e-global-typography-secondary-font-family: "Roboto Slab";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "Syne";
+    --e-global-typography-text-font-size: 16px;
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-text-line-height: 1.8em;
+    --e-global-typography-accent-font-family: "Syne";
+    --e-global-typography-accent-font-size: 16px;
+    --e-global-typography-accent-font-weight: 500;
+    --e-global-typography-4e3dd97-font-family: "Syne";
+    --e-global-typography-4e3dd97-font-size: 64px;
+    --e-global-typography-4e3dd97-font-weight: 700;
+    --e-global-typography-4e3dd97-line-height: 1.2em;
+    --e-global-typography-a304b0b-font-family: "Syne";
+    --e-global-typography-a304b0b-font-size: 48px;
+    --e-global-typography-a304b0b-font-weight: 700;
+    --e-global-typography-a304b0b-line-height: 1.3em;
+    --e-global-typography-a304b0b-letter-spacing: 0px;
+    --e-global-typography-a304b0b-word-spacing: 0px;
+    --e-global-typography-7c0dd28-font-family: "Syne";
+    --e-global-typography-7c0dd28-font-size: 40px;
+    --e-global-typography-7c0dd28-font-weight: 700;
+    --e-global-typography-f863092-font-family: "Syne";
+    --e-global-typography-f863092-font-size: 32px;
+    --e-global-typography-f863092-font-weight: 600;
+    --e-global-typography-f863092-line-height: 1.43em;
+    --e-global-typography-d06f073-font-family: "Syne";
+    --e-global-typography-d06f073-font-size: 20px;
+    --e-global-typography-d06f073-font-weight: 700;
+    --e-global-typography-d06f073-line-height: 1.5em;
+    --e-global-typography-d06f073-letter-spacing: 0px;
+    --e-global-typography-d06f073-word-spacing: 0px;
+    --e-global-typography-f861afe-font-family: "Syne";
+    --e-global-typography-f861afe-font-size: 18px;
+    --e-global-typography-f861afe-font-weight: 700;
+    --e-global-typography-f861afe-text-transform: capitalize;
+    --e-global-typography-f861afe-line-height: 1.2em;
+    --e-global-typography-3c3e21c-font-family: "Syne";
+    --e-global-typography-3c3e21c-font-size: 18px;
+    --e-global-typography-3c3e21c-font-weight: 500;
+    --e-global-typography-3c3e21c-line-height: 1em;
+    --e-global-typography-3c3e21c-letter-spacing: 0px;
+    --e-global-typography-3c3e21c-word-spacing: 0px;
+    background-color: var(--e-global-color-35e0e26);
+}
+
+.elementor-section.elementor-section-boxed>.elementor-container {
+    max-width: 1140px;
+}
+
+.e-con {
+    --container-max-width: 1140px;
+}
+
+.elementor-widget:not(:last-child) {
+    margin-block-end: 20px;
+}
+
+.elementor-element {
+    --widgets-spacing: 20px 20px;
+}
+
+   
+
+h1.entry-title {
+    display: var(--page-title-display);
+}
+
+.elementor-kit-3 e-page-transition {
+    background-color: #FFBC7D;
+}
+
+.site-header .site-branding {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.site-header {
+    padding-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.site-footer .site-branding {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+@media(max-width:1024px) {
+    .elementor-kit-3 {
+        --e-global-typography-4e3dd97-font-size: 44px;
+        --e-global-typography-a304b0b-font-size: 25px;
+        --e-global-typography-a304b0b-line-height: 1.5em;
+        --e-global-typography-7c0dd28-font-size: 26px;
+        --e-global-typography-f863092-font-size: 18px;
+        --e-global-typography-d06f073-font-size: 13px;
+        --e-global-typography-f861afe-font-size: 16px;
+        --e-global-typography-3c3e21c-font-size: 16px;
+    }
+
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1024px;
+    }
+
+    .e-con {
+        --container-max-width: 1024px;
+    }
+}
+
+@media(max-width:767px) {
+    .elementor-kit-3 {
+        --e-global-typography-4e3dd97-font-size: 28px;
+        --e-global-typography-7c0dd28-font-size: 26px;
+        --e-global-typography-f863092-font-size: 20px;
+    }
+
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 767px;
+    }
+
+    .e-con {
+        --container-max-width: 767px;
+    }
+}
