@@ -18,10 +18,10 @@
 
 .elementor-136 .elementor-element.elementor-element-2e33a26:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
 .elementor-136 .elementor-element.elementor-element-2e33a26>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("/images/4.jpg");
+    /* background-image: url("/images/4.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .elementor-136 .elementor-element.elementor-element-2e33a26>.elementor-element-populated,
