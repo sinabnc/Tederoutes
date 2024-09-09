@@ -8,7 +8,7 @@
 }
 
 .elementor-125 .elementor-element.elementor-element-2be1a57 {
-	padding: 22px 20px 22px 20px;
+	padding: 20px 20px 22px 20px;
 }
 
 .elementor-125 .elementor-element.elementor-element-c55dd57>.elementor-element-populated {
@@ -170,7 +170,7 @@
 	word-spacing: var(--e-global-typography-3c3e21c-word-spacing);
 	fill: var(--e-global-color-accent);
 	color: var(--e-global-color-accent);
-	background-color: var(--e-global-color-primary);
+	background-color:#88D66C;
 	border-radius: 12px 12px 12px 12px;
 	padding: 16px 22px 16px 22px;
 }
