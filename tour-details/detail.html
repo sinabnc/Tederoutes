@@ -709,6 +709,24 @@
 				background-image: none !important;
 			}
 		}
+		.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
 	</style>
 </head>
 
@@ -729,7 +747,7 @@
 							data-id="7d7543a" data-element_type="widget" data-widget_type="tl-site-logo.default">
 							<div class="elementor-widget-container">
 								<a href=""><img
-										src="/agency.elementor.templately.com/images/IMG_9426.png"
+										src="/images/IMG_9426.png"
 										title="86060095-explorely-logo.png" alt=""
 										class="attachment-full size-full wp-image-7" loading="lazy" /></a>
 							</div>
@@ -751,36 +769,31 @@
 									<ul id="menu-1-a48f476" class="elementor-nav-menu">
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-160">
-											<a href="../index.html" class="elementor-item">Home</a></li>
+											<a href="/index.html" class="elementor-item">Home</a></li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165">
-											<a href="../destination/index.html" class="elementor-item">Destination</a>
+											<a href="/destination/destionation.html" class="elementor-item">Destination</a>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-164">
-											<a href="../tour-packages/index.html" class="elementor-item">Tour
+											<a href="/tour-packages/package.html" class="elementor-item">Tour
 												Packages</a>
 											<ul class="sub-menu elementor-nav-menu--dropdown">
 												<li
 													class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-145 current_page_item menu-item-161">
-													<a href="index.html" aria-current="page"
+													<a href="/tour-details/detail.html" aria-current="page"
 														class="elementor-sub-item elementor-item-active">Tour
 														Details</a></li>
 											</ul>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-163">
-											<a href="../blog/index.html" class="elementor-item">Blog</a>
-											<ul class="sub-menu elementor-nav-menu--dropdown">
-												<li
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166">
-													<a href="#" class="elementor-sub-item elementor-item-anchor">Blog
-														Details</a></li>
-											</ul>
+											<a href="/blog/blog.html" class="elementor-item">About</a>
+											
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
-											<a href="../contact/index.html" class="elementor-item">Contact</a></li>
+											<a href="/contact/contact.html" class="elementor-item">Contact</a></li>
 									</ul>
 								</nav>
 								<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -804,36 +817,31 @@
 									<ul id="menu-2-a48f476" class="elementor-nav-menu">
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-160">
-											<a href="../index.html" class="elementor-item" tabindex="-1">Home</a></li>
+											<a href="/index.html" class="elementor-item" tabindex="-1">Home</a></li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165">
-											<a href="../destination/index.html" class="elementor-item"
+											<a href="/destination/destionation.html" class="elementor-item"
 												tabindex="-1">Destination</a></li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-164">
-											<a href="../tour-packages/index.html" class="elementor-item"
+											<a href="/tour-packages/package.html" class="elementor-item"
 												tabindex="-1">Tour Packages</a>
 											<ul class="sub-menu elementor-nav-menu--dropdown">
 												<li
 													class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-145 current_page_item menu-item-161">
-													<a href="index.html" aria-current="page"
+													<a href="/tour-details/detail.html" aria-current="page"
 														class="elementor-sub-item elementor-item-active"
 														tabindex="-1">Tour Details</a></li>
 											</ul>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-163">
-											<a href="../blog/index.html" class="elementor-item" tabindex="-1">Blog</a>
-											<ul class="sub-menu elementor-nav-menu--dropdown">
-												<li
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166">
-													<a href="#" class="elementor-sub-item elementor-item-anchor"
-														tabindex="-1">Blog Details</a></li>
-											</ul>
+											<a href="/blog/blog.html" class="elementor-item" tabindex="-1">About</a>
+											
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
-											<a href="../contact/index.html" class="elementor-item"
+											<a href="/contact/contact.html" class="elementor-item"
 												tabindex="-1">Contact</a></li>
 									</ul>
 								</nav>
@@ -848,11 +856,21 @@
 							data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-										<span class="elementor-button-content-wrapper">
-											<span class="elementor-button-text">join with us</span>
-										</span>
-									</a>
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
+											data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
+											<div class="elementor-widget-container">
+												<div class="elementor-button-wrapper">
+													<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+														<select id="language-select" onchange="changeLanguage()">
+															<option value="en">English</option>
+															<option value="ar">Arabic</option>
+														</select>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2423,6 +2441,10 @@
 			</div>
 		</section>
 	</div>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 	<script type='text/javascript'>
 		const lazyloadRunObserver = () => {
 			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
