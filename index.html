@@ -3151,36 +3151,28 @@
             }
         });
     }
-	const translations = {
-        en: {
-            heading: "Explore Our Tour Packages",
-            button: "Show All Post"
-        },
-        ar: {
-            heading:"جولات الخطة لتحلم بالمواقع بنقرة واحدة فقط!"
-,
-            button: "عرض جميع المنشورات"
+	 // Check if the user has a saved language preference
+	 document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('selectedLanguage');
+        if (savedLang) {
+            document.getElementById('language-select').value = savedLang;
         }
-    };
+    });
 
-    // Load selected language
-    function loadLanguage() {
+    // Function to change language
+    function changeLanguage() {
         const selectedLang = document.getElementById('language-select').value;
-
-        // Update the text content on the page
-        document.getElementById('heading-text').innerText = translations[selectedLang].heading;
-        document.getElementById('post-button').innerText = translations[selectedLang].button;
 
         // Save selected language in local storage
         localStorage.setItem('selectedLanguage', selectedLang);
-    }
 
-    // On page load, apply the saved language
-    document.addEventListener('DOMContentLoaded', function() {
-        const savedLang = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en'
-        document.getElementById('language-select').value = savedLang;
-        loadLanguage();
-    });
+        // Redirect to respective language version of the site
+        if (selectedLang === 'en') {
+            window.location.href = '/en';  // Adjust based on your URL structure
+        } else if (selectedLang === 'ar') {
+            window.location.href = '/ar';
+        }
+    }
 	
 	</script>
 	<link rel='stylesheet' id='fluentform-elementor-widget-css'
