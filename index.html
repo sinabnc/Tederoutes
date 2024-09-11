@@ -13,6 +13,8 @@
 	<title>Trandroute</title>
 	<meta name='robots' content='max-image-preview:large' />
 	<link rel="alternate" type="application/rss+xml" title="ExploreLy  &raquo; Feed" href="feed/index.html" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.8.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 	<link rel="alternate" type="application/rss+xml" title="ExploreLy  &raquo; Comments Feed"
 		href="comments/feed/index.html" />
 	<script>
@@ -40,17 +42,24 @@
 			padding: 0 !important;
 		}
 
-		#whats {
-			width: 150px;
-			/* Adjust as per desktop needs */
-			height: auto;
-		}
+		.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
 
-		#whats-mobile {
-			width: 100px;
-			/* Adjust as per mobile needs */
-			height: auto;
-		}
+.my-float{
+	margin-top:16px;
+}
 	</style>
 	<style id='classic-theme-styles-inline-css'>
 		/*! This file is auto-generated */
@@ -859,22 +868,25 @@
 					</div>
 				</div>
 				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-069a652"
-					data-id="069a652" data-element_type="column">
-					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-							data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
-							<div class="elementor-widget-container">
-								<div class="elementor-button-wrapper">
-									<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-										<span class="elementor-button-content-wrapper">
-											connect
-										</span>
-									</a>
-								</div>
+				data-id="069a652" data-element_type="column">
+				<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
+						data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
+						<div class="elementor-widget-container">
+							<div class="elementor-button-wrapper">
+								<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+									<select id="language-select" onchange="changeLanguage()">
+										<option value="en">English</option>
+										<option value="ar">Arabic</option>
+									</select>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+</div>
+
 			</div>
 		</section>
 	</div>
@@ -992,7 +1004,7 @@
 						<div class="elementor-element elementor-element-04b0fc7 elementor-widget__width-initial elementor-widget elementor-widget-heading"
 							data-id="04b0fc7" data-element_type="widget" data-widget_type="heading.default">
 							<div class="elementor-widget-container">
-								<h2 class="elementor-heading-title elementor-size-default">Plan Tours <br /> To Dream
+								<h2 id="heading-text" class="elementor-heading-title elementor-size-default">Plan Tours <br /> To Dream
 									Locations In Just A Click!</h2>
 							</div>
 						</div>
@@ -2326,8 +2338,8 @@
 											data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}"
 											data-widget_type="heading.default">
 											<div class="elementor-widget-container">
-												<h2 class="elementor-heading-title elementor-size-default">Explore Our
-													Tour Packages</h2>
+												<h2 class="elementor-heading-title elementor-size-default">Plan Tours
+													To Dream Locations In Just A Click!</h2>
 											</div>
 										</div>
 									</div>
@@ -3090,7 +3102,12 @@
 				</div>
 			</div>
 		</section>
+		
 	</div>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
 	<script type='text/javascript'>
 		const lazyloadRunObserver = () => {
 			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
@@ -3134,6 +3151,37 @@
             }
         });
     }
+	const translations = {
+        en: {
+            heading: "Explore Our Tour Packages",
+            button: "Show All Post"
+        },
+        ar: {
+            heading:"جولات الخطة لتحلم بالمواقع بنقرة واحدة فقط!"
+,
+            button: "عرض جميع المنشورات"
+        }
+    };
+
+    // Load selected language
+    function loadLanguage() {
+        const selectedLang = document.getElementById('language-select').value;
+
+        // Update the text content on the page
+        document.getElementById('heading-text').innerText = translations[selectedLang].heading;
+        document.getElementById('post-button').innerText = translations[selectedLang].button;
+
+        // Save selected language in local storage
+        localStorage.setItem('selectedLanguage', selectedLang);
+    }
+
+    // On page load, apply the saved language
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en'
+        document.getElementById('language-select').value = savedLang;
+        loadLanguage();
+    });
+	
 	</script>
 	<link rel='stylesheet' id='fluentform-elementor-widget-css'
 		href='wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widgetf08a.css?ver=5.2.0' media='all' />
