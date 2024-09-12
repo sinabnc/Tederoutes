@@ -119,7 +119,7 @@
 }
 
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--dropdown {
-	background-color: var(--e-global-color-primary);
+	background-color: #88D66C;
 }
 
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--dropdown a:hover,
@@ -132,12 +132,12 @@
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--dropdown a:hover,
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--dropdown a.elementor-item-active,
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--dropdown a.highlighted {
-	background-color: var(--e-global-color-primary);
+	background-color: #88D66C;
 }
 
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--dropdown a.elementor-item-active {
 	color: #FFFFFF;
-	background-color: var(--e-global-color-primary);
+	background-color: #88D66C;
 }
 
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--dropdown .elementor-item,
