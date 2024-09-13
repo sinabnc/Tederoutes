@@ -378,6 +378,55 @@
 			font-size: 1.5em;
 			line-height: 1.6;
 		}
+		.hero {
+      background: url('https://example.com/luxury-nature-bg.jpg') no-repeat center center/cover;
+      height: 400px;
+      position: relative;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .values-list {
+      padding-left: 0;
+    }
+
+    .values-list li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .partners {
+      background-color: #f8f9fa;
+      padding: 50px 0;
+    }
+
+    .partner-slide img {
+      width: 100px;
+      object-fit: contain;
+      margin: 0 15px;
+    }
+
+    .carousel-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 	</style>
 	<link rel='stylesheet' id='easyjobsowl-css'
 		href='../wp-content/plugins/easyjobs/public/assets/vendor/owl.carousel.mine334.css?ver=2.4.15' media='all' />
@@ -400,6 +449,7 @@
 	<link rel='stylesheet' id='google-fonts-1-css'
 		href='https://fonts.googleapis.com/css?family=Syne%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.6.1'
 		media='all' />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<script src="../wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
 	<script src="../wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
@@ -794,6 +844,51 @@
 		.my-float {
 			margin-top: 16px;
 		}
+		.custom-language-select {
+        display: flex;
+        align-items: center;
+        border: 1px solid #589442;
+        border-radius: 4px;
+        padding: 3px 7px;
+		margin-left: 15px;
+        width: fit-content;
+		
+    }
+
+    .flag-icon {
+        width: 20px;
+        height: 14px;
+        margin-right: 8px;
+    }
+
+    .custom-select {
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background-color: transparent;
+        cursor: pointer;
+        appearance: none; /* Remove default dropdown arrow */
+    }
+
+    .custom-select:after {
+        content: "\25BC"; /* Add custom dropdown arrow */
+        font-size: 10px;
+        padding-left: 5px;
+    }
+	#logo-img {
+			width: 200px;
+			height: 60px;
+		}
+    /* Hide native dropdown arrow */
+    select::-ms-expand {
+        display: none;
+    }
+    
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
 	</style>
 </head>
 
@@ -812,7 +907,7 @@
 						<div class="elementor-element elementor-element-7d7543a elementor-widget elementor-widget-tl-site-logo"
 							data-id="7d7543a" data-element_type="widget" data-widget_type="tl-site-logo.default">
 							<div class="elementor-widget-container">
-								<a href=""><img src="/images/IMG_9426.png" title="86060095-explorely-logo.png" alt=""
+								<a href=""><img id="logo-img" src="/images/IMG_9426 1 (2).png" title="86060095-explorely-logo.png" alt=""
 										class="attachment-full size-full wp-image-7" loading="lazy" /></a>
 							</div>
 						</div>
@@ -917,25 +1012,17 @@
 					data-id="069a652" data-element_type="column">
 					<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-							data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
+							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-											data-id="5763aee" data-element_type="widget"
-											data-widget_type="button.default">
-											<div class="elementor-widget-container">
-												<div class="elementor-button-wrapper">
-													<a class="elementor-button elementor-button-link elementor-size-sm"
-														href="#">
-														<select id="language-select" onchange="changeLanguage()">
-															<option value="en">English</option>
-															<option value="ar">Arabic</option>
-														</select>
-													</a>
-												</div>
-											</div>
-										</div>
+									<div class="custom-language-select">
+										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
+											 alt="German Flag" class="flag-icon">
+										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
+											<option value="en">English</option>
+											<option value="ar">Arabic</option>
+											<option value="de" selected>Deutsch</option>
+										</select>
 									</div>
 								</div>
 							</div>
@@ -979,62 +1066,94 @@
 				</div>
 			</div>
 		</section>
-		<div class="header">
-			<h1>A company with an expertise on any architectural, and engineering needs</h1>
-			<p>InfoGraph is a company that was founded in Estonia back in 2009. We have been able to achieve incredible
-				milestones in a short period of time, thanks to our team's extensive experience in engineering and
-				architecture.</p>
-		</div>
-
-		<!-- Image Gallery Section -->
-		<div class="gallery">
-			<div class="gallery-item">
-				<img src="image1.jpg" alt="Gallery Image 1">
-				<p>Short description of the project, highlighting key aspects and achievements.</p>
-			</div>
-			<div class="gallery-item">
-				<img src="image2.jpg" alt="Gallery Image 2">
-				<p>Another project description, detailing the design process and outcome.</p>
-			</div>
-		</div>
-
-		<!-- Achievements Section -->
-		<div class="achievements">
-			<h2>Achievements</h2>
-			<table class="table table-dark">
-				<thead>
-					<tr>
-						<th>Project</th>
-						<th>Description</th>
-						<th>Year</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Building A</td>
-						<td>A 15-story residential complex located in the heart of the city.</td>
-						<td>2018</td>
-					</tr>
-					<tr>
-						<td>Bridge Construction</td>
-						<td>Modern suspension bridge completed in 2019, connecting two major highways.</td>
-						<td>2019</td>
-					</tr>
-					<tr>
-						<td>Eco Homes</td>
-						<td>Energy-efficient homes designed with sustainable materials and smart technology.</td>
-						<td>2020</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<!-- Footer Section -->
-		<div class="footer">
-			<h2>Consider collaborating? Reach us. We want to collaborate with you to build amazing stuff.</h2>
-			<a href="#">Let's Talk</a>
-		</div>
+		<!-- Hero Section -->
+<section class="hero">
+	<div class="container">
+	  <h1>Discover the Essence of Luxury and Nature</h1>
+	  <p class="lead">Experience world-class comfort and the serenity of nature with Trendroutes Holiday Homes</p>
 	</div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="about-section py-5">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6">
+		  <img src="https://example.com/luxury-home.jpg" alt="Luxury Holiday Home" class="img-fluid rounded">
+		</div>
+		<div class="col-md-6">
+		  <h2 class="section-title">About Trendroutes Holiday Homes</h2>
+		  <p>At Trendroutes Holiday Homes, we believe in the perfect blend of luxury and nature. Whether you seek a serene escape in the mountains or an opulent stay by the seaside, our holiday homes provide the perfect sanctuary. With carefully selected locations and meticulously designed properties, we aim to create an unforgettable experience for you and your loved ones.</p>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <!-- Vision & Mission Section -->
+  <section class="vision-mission-section py-5 bg-light">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-6">
+		  <h2 class="section-title">Our Vision</h2>
+		  <p>To be the premier provider of luxurious and nature-integrated holiday homes, creating memorable experiences that leave our guests rejuvenated and inspired.</p>
+		</div>
+		<div class="col-md-6">
+		  <h2 class="section-title">Our Mission</h2>
+		  <p>To offer unparalleled hospitality through carefully curated properties that balance comfort, luxury, and nature. We are dedicated to ensuring that every guest feels at home, surrounded by the beauty and tranquility of nature.</p>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <!-- Values Section -->
+  <section class="values-section py-5">
+	<div class="container">
+	  <h2 class="section-title">Our Values</h2>
+	  <ul class="values-list">
+		<li><strong>Integrity:</strong> We build trust through transparency and professionalism.</li>
+		<li><strong>Quality:</strong> We ensure that every home meets the highest standards of luxury and comfort.</li>
+		<li><strong>Sustainability:</strong> Our homes are designed with respect for the environment, blending seamlessly with nature.</li>
+		<li><strong>Customer-Centric:</strong> We prioritize the satisfaction of every guest and tailor experiences to meet their needs.</li>
+	  </ul>
+	</div>
+  </section>
+  
+  <!-- Partner Slider Section -->
+  <section class="partners">
+	<div class="container">
+	  <h2 class="section-title text-center">Our Partners</h2>
+	  <div id="partnerCarousel" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<div class="d-flex justify-content-center">
+			  <div class="partner-slide">
+				<img src="https://example.com/partner-logo1.png" alt="Partner 1">
+				<img src="https://example.com/partner-logo2.png" alt="Partner 2">
+				<img src="https://example.com/partner-logo3.png" alt="Partner 3">
+			  </div>
+			</div>
+		  </div>
+		  <div class="carousel-item">
+			<div class="d-flex justify-content-center">
+			  <div class="partner-slide">
+				<img src="https://example.com/partner-logo4.png" alt="Partner 4">
+				<img src="https://example.com/partner-logo5.png" alt="Partner 5">
+				<img src="https://example.com/partner-logo6.png" alt="Partner 6">
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#partnerCarousel" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#partnerCarousel" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+	</div>
+  </section>
 	<div data-elementor-type="templately-footer" data-elementor-id="127"
 		class="elementor elementor-127 post-159 post type-post status-publish format-standard has-post-thumbnail hentry category-explorely-blogpost category-explorely-homepost tag-explorely-blogpost tag-explorely-homepost"
 		data-elementor-post-type="templately_library" data-elementor-title="Footer">

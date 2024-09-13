@@ -1418,7 +1418,7 @@
 .elementor-136 .elementor-element.elementor-element-e17980f:not(.elementor-motion-effects-element-type-background),
 .elementor-136 .elementor-element.elementor-element-e17980f>.elementor-motion-effects-container>.elementor-motion-effects-layer {
     background-color: #1D1F2499;
-    background-image: url("/images/14.jpg");
+    background-image: url("https://media.istockphoto.com/id/1246366598/photo/a-scenic-view-of-boats-under-a-blue-sky-in-backwaters-situated-in-allepey-town-located-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=CpEOA5BD1uwoO5w6VTlP0ElVh4PvamOwRDac6SNmvjg=");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1494,7 +1494,7 @@
 
 .elementor-136 .elementor-element.elementor-element-05c435a .eael-call-to-action.cta-preset-1:not(.cta-preset-2) .cta-button:not(.cta-secondary-button) {
     color: var(--e-global-color-accent);
-    background: var(--e-global-color-primary);
+    background: #88D66C;
 }
 
 .elementor-136 .elementor-element.elementor-element-05c435a .eael-call-to-action .cta-button:not(.cta-secondary-button) {
@@ -1502,7 +1502,7 @@
 }
 
 .elementor-136 .elementor-element.elementor-element-05c435a .eael-call-to-action.cta-preset-1:not(.cta-preset-2) .cta-button:hover:not(.cta-secondary-button) {
-    color: var(--e-global-color-primary);
+    color: #88D66C;
     background: #FFFFFF;
 }
 

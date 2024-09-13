@@ -727,6 +727,52 @@
 .my-float{
 	margin-top:16px;
 }
+.custom-language-select {
+        display: flex;
+        align-items: center;
+        border: 1px solid #589442;
+        border-radius: 4px;
+        padding: 3px 7px;
+		margin-left: 15px;
+        width: fit-content;
+		
+    }
+
+    .flag-icon {
+        width: 20px;
+        height: 14px;
+        margin-right: 8px;
+    }
+
+    .custom-select {
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background-color: transparent;
+        cursor: pointer;
+        appearance: none; /* Remove default dropdown arrow */
+    }
+
+    .custom-select:after {
+        content: "\25BC"; /* Add custom dropdown arrow */
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    /* Hide native dropdown arrow */
+    select::-ms-expand {
+        display: none;
+    }
+    
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+	#logo-img {
+			width: 200px;
+			height: 60px;
+		}
 	</style>
 </head>
 
@@ -746,8 +792,8 @@
 						<div class="elementor-element elementor-element-7d7543a elementor-widget elementor-widget-tl-site-logo"
 							data-id="7d7543a" data-element_type="widget" data-widget_type="tl-site-logo.default">
 							<div class="elementor-widget-container">
-								<a href=""><img
-										src="/images/IMG_9426.png"
+								<a href=""><img id="logo-img"
+										src="/images/IMG_9426 1 (2).png"
 										title="86060095-explorely-logo.png" alt=""
 										class="attachment-full size-full wp-image-7" loading="lazy" /></a>
 							</div>
@@ -853,23 +899,17 @@
 					data-id="069a652" data-element_type="column">
 					<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-							data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
+							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-											data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
-											<div class="elementor-widget-container">
-												<div class="elementor-button-wrapper">
-													<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-														<select id="language-select" onchange="changeLanguage()">
-															<option value="en">English</option>
-															<option value="ar">Arabic</option>
-														</select>
-													</a>
-												</div>
-											</div>
-										</div>
+									<div class="custom-language-select">
+										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
+											 alt="German Flag" class="flag-icon">
+										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
+											<option value="en">English</option>
+											<option value="ar">Arabic</option>
+											<option value="de" selected>Deutsch</option>
+										</select>
 									</div>
 								</div>
 							</div>

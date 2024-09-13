@@ -466,7 +466,7 @@ body:not(.rtl) .elementor-139 .elementor-element.elementor-element-297d1f6 .elem
 
 .elementor-139 .elementor-element.elementor-element-a7f1b40 .eael-call-to-action.cta-preset-1:not(.cta-preset-2) .cta-button:not(.cta-secondary-button) {
     color: var(--e-global-color-accent);
-    background: var(--e-global-color-primary);
+    background: #88D66C;
 }
 
 .elementor-139 .elementor-element.elementor-element-a7f1b40 .eael-call-to-action .cta-button:not(.cta-secondary-button) {
@@ -474,7 +474,7 @@ body:not(.rtl) .elementor-139 .elementor-element.elementor-element-297d1f6 .elem
 }
 
 .elementor-139 .elementor-element.elementor-element-a7f1b40 .eael-call-to-action.cta-preset-1:not(.cta-preset-2) .cta-button:hover:not(.cta-secondary-button) {
-    color: var(--e-global-color-primary);
+    color: #88D66C;
     background: #FFFFFF;
 }
 

@@ -731,8 +731,8 @@
 		}
 
 		#logo-img {
-			width: 150px;
-			height: 135px;
+			width: 200px;
+			height: 60px;
 		}
 
 		.custom-button {
@@ -740,19 +740,54 @@
 			/* Adjusts the padding to reduce height and width */
 			display: inline-block;
 		}
-
-		/* Custom CSS for select */
-		.custom-select {
-			width: 80px;
-			/* Reduces the width of the select dropdown */
-			height: 30px;
-			/* Reduces the height of the select dropdown */
-			padding: 2px;
-			/* Adjusts padding for the select dropdown */
-			font-size: 14px;
-			/* Adjusts font size */
+		.custom-button:hover{
+			background-color: white;
 		}
+
 		
+		
+		.custom-language-select {
+        display: flex;
+        align-items: center;
+        border: 1px solid #589442;
+        border-radius: 4px;
+        padding: 3px 7px;
+		margin-left: 15px;
+        width: fit-content;
+		
+    }
+
+    .flag-icon {
+        width: 20px;
+        height: 14px;
+        margin-right: 8px;
+    }
+
+    .custom-select {
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background-color: transparent;
+        cursor: pointer;
+        appearance: none; /* Remove default dropdown arrow */
+    }
+
+    .custom-select:after {
+        content: "\25BC"; /* Add custom dropdown arrow */
+        font-size: 10px;
+        padding-left: 5px;
+    }
+
+    /* Hide native dropdown arrow */
+    select::-ms-expand {
+        display: none;
+    }
+    
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
 	</style>
 </head>
 
@@ -772,7 +807,7 @@
 						<div class="elementor-element elementor-element-7d7543a elementor-widget elementor-widget-tl-site-logo"
 							data-id="7d7543a" data-element_type="widget" data-widget_type="tl-site-logo.default">
 							<div class="elementor-widget-container">
-								<a href="index.html"><img src="images/IMG_9426 1.png"
+								<a href="index.html"><img id="logo-img" src="images/IMG_9426 1 (2).png"
 										title="86060095-explorely-logo.png" alt=""
 										class="attachment-full size-full wp-image-7" loading="lazy" /></a>
 							</div>
@@ -816,7 +851,7 @@
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-163">
-											<a href="index.html" class="elementor-item">About</a>
+											<a href="blog/blog.html" class="elementor-item">About</a>
 
 										</li>
 										<li
@@ -868,7 +903,7 @@
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-163">
-											<a href="index.html" class="elementor-item" tabindex="-1">About</a>
+											<a href="blog/blog.html" class="elementor-item" tabindex="-1">About</a>
 											<ul class="sub-menu elementor-nav-menu--dropdown">
 
 											</ul>
@@ -888,16 +923,18 @@
 					data-id="069a652" data-element_type="column">
 					<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-							data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
+							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<a class="elementor-button elementor-button-link elementor-size-sm custom-button"
-										href="#">
-										<select id="language-select" onchange="changeLanguage()" class="custom-select">
+									<div class="custom-language-select">
+										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
+											 alt="German Flag" class="flag-icon">
+										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
 											<option value="en">English</option>
 											<option value="ar">Arabic</option>
+											<option value="de" selected>Deutsch</option>
 										</select>
-									</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1364,7 +1401,7 @@
 																	Reviews)</p>
 																</p>
 															</div>
-															<a href="#" target=""></a>
+															<a href="/tour-details/detail.html" target=""></a>
 														</figcaption>
 													</figure>
 												</div>
@@ -1396,7 +1433,7 @@
 																	Reviews)</p>
 																</p>
 															</div>
-															<a href="#" target=""></a>
+															<a href="/tour-details/detail.html" target=""></a>
 														</figcaption>
 													</figure>
 												</div>
@@ -1428,7 +1465,7 @@
 																	Reviews)</p>
 																</p>
 															</div>
-															<a href="#" target=""></a>
+															<a href="/tour-details/detail.html" target=""></a>
 														</figcaption>
 													</figure>
 												</div>
@@ -1460,7 +1497,7 @@
 																	Reviews)</p>
 																</p>
 															</div>
-															<a href="#" target=""></a>
+															<a href="/tour-details/detail.html" target=""></a>
 														</figcaption>
 													</figure>
 												</div>
@@ -1756,8 +1793,8 @@
 						<div class="elementor-section elementor-inner-section elementor-element elementor-element-9a665ab elementor-section-full_width elementor-section-height-default elementor-section-height-default"
 							data-id="9a665ab" data-element_type="section">
 							<div class="elementor-container elementor-column-gap-no text-center">
-								<button id="luxuryBtn" class="filter-btn custom-button">Luxury</button>
-								<button id="normalBtn" class="filter-btn custom-button">Normal</button>
+								<button id="luxuryBtn" class="filter-btn custom-button"style="color:green; border:solid green 1px;">Luxury</button>
+								<button id="normalBtn" class="filter-btn custom-button"style="color:green; border:solid green 1px;">Normal</button>
 							</div>
 						</div>
 						<!-- Blog Grid with Articles -->
@@ -3119,7 +3156,7 @@
 														display: inline-block
 													}
 												</style>
-												<p>© Copyright 2024.by <a href="#">Trandroutes</a></p>
+												<p>© Copyright 2024.by <a href="#"> Tendroutes</a></p>
 											</div>
 										</div>
 									</div>
