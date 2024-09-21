@@ -5,6 +5,7 @@
 .elementor-125 .elementor-element.elementor-element-2be1a57>.elementor-container>.elementor-column>.elementor-widget-wrap {
 	align-content: center;
 	align-items: center;
+	
 }
 
 .elementor-125 .elementor-element.elementor-element-2be1a57 {
@@ -37,7 +38,7 @@
 }
 
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--main .elementor-item {
-	color: var(--e-global-color-text);
+	color: #347928;
 	fill: var(--e-global-color-text);
 	padding-left: 0px;
 	padding-right: 0px;
@@ -49,7 +50,7 @@
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--main .elementor-item.elementor-item-active,
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--main .elementor-item.highlighted,
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--main .elementor-item:focus {
-	color: #FFFFFF;
+	color: #347928;
 	fill: #FFFFFF;
 }
 
@@ -64,7 +65,7 @@
 }
 
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--main .elementor-item.elementor-item-active {
-	color: #FFFFFF;
+	color: #347928;
 }
 
 .elementor-125 .elementor-element.elementor-element-a48f476 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item.elementor-item-active:before,
