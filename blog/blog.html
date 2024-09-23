@@ -889,6 +889,34 @@
 			width: 200px;
 			height: 60px;
 		}
+		.goog-te-gadget-simple {
+        background-color: #347928 !important;  /* Red background */
+        border: 2px solid #347928 !important;  /* Navy blue border */
+        border-radius: 50px;  /* Makes the button round */
+        color: #fff !important;  /* White text */
+        font-size: 10pt !important;  /* Slightly larger font */
+        font-weight: bold !important;  /* Bold text */
+        display: inline-block;
+        padding: 5px 10px !important;  /* Padding for button feel */
+        cursor: pointer;
+        transition: background-color 0.3s ease;  /* Smooth hover transition */
+    }
+    
+    /* Remove Google Translate icon */
+    .goog-te-gadget-icon {
+        display: none !important;
+    }
+    
+    /* Style the text inside the button */
+    .goog-te-gadget-simple span {
+        color: #fff !important;  /* Ensure text inside the button is white */
+    }
+    
+    /* Add a hover effect to the button */
+    .goog-te-gadget-simple:hover {
+        background-color: rgb(64, 232, 97) !important;  /* Dark blue on hover */
+        color: #bf1e2e !important;  /* Red text on hover */
+    }
     /* Hide native dropdown arrow */
     select::-ms-expand {
         display: none;
@@ -1025,15 +1053,7 @@
 							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<div class="custom-language-select">
-										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
-											 alt="German Flag" class="flag-icon">
-										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
-											<option value="en">English</option>
-											<option value="ar">Arabic</option>
-											<option value="de" selected>Deutsch</option>
-										</select>
-									</div>
+									<div id="google_translate_element"></div>
 								</div>
 							</div>
 						</div>
@@ -2032,6 +2052,28 @@
 		id="elementor-frontend-js"></script>
 	<script src="../wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.mince54.js?ver=3.19.3"
 		id="pro-preloaded-elements-handlers-js"></script>
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+			  new google.translate.TranslateElement({
+				pageLanguage: 'en',  // Default language (English)
+				includedLanguages: 'en,ar',  // Only allow English and Arabic
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+			  }, 'google_translate_element');
+			}
+		  
+			function changeLanguage() {
+			  var selectedLanguage = document.getElementById("languageSelector").value;
+			  var translateElement = document.querySelector(".goog-te-combo");
+		  
+			  if (translateElement) {
+				translateElement.value = selectedLanguage;  // Set the language value
+				translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+			  }
+			}
+		  </script>
+		  
+		  <!-- Google Translate API -->
+		  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 <!-- Mirrored from agency.elementor.templately.com/explorely/blog/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2024 10:31:18 GMT -->

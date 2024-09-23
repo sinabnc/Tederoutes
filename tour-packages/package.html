@@ -792,6 +792,34 @@
         -moz-appearance: none;
         appearance: none;
     }
+	.goog-te-gadget-simple {
+        background-color: #347928 !important;  /* Red background */
+        border: 2px solid #347928 !important;  /* Navy blue border */
+        border-radius: 50px;  /* Makes the button round */
+        color: #fff !important;  /* White text */
+        font-size: 10pt !important;  /* Slightly larger font */
+        font-weight: bold !important;  /* Bold text */
+        display: inline-block;
+        padding: 5px 10px !important;  /* Padding for button feel */
+        cursor: pointer;
+        transition: background-color 0.3s ease;  /* Smooth hover transition */
+    }
+    
+    /* Remove Google Translate icon */
+    .goog-te-gadget-icon {
+        display: none !important;
+    }
+    
+    /* Style the text inside the button */
+    .goog-te-gadget-simple span {
+        color: #fff !important;  /* Ensure text inside the button is white */
+    }
+    
+    /* Add a hover effect to the button */
+    .goog-te-gadget-simple:hover {
+        background-color: rgb(64, 232, 97) !important;  /* Dark blue on hover */
+        color: #bf1e2e !important;  /* Red text on hover */
+    }
 	</style>
 </head>
 
@@ -923,15 +951,7 @@
 							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<div class="custom-language-select">
-										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
-											 alt="German Flag" class="flag-icon">
-										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
-											<option value="en">English</option>
-											<option value="ar">Arabic</option>
-											<option value="de" selected>Deutsch</option>
-										</select>
-									</div>
+									<div id="google_translate_element"></div>
 								</div>
 							</div>
 						</div>
@@ -2971,6 +2991,28 @@
 	<script id="elementor-frontend-js-before">
 		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.4", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/agency.elementor.templately.com\/explorely\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/agency.elementor.templately.com\/explorely\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "9194cbc32a" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "logo", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 142, "title": "Tour%20Packages%20%E2%80%93%20ExploreLy%20", "excerpt": "", "featuredImage": false } };
 	</script>
+	<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<script src="../wp-content/plugins/elementor/assets/js/frontend.mind5d5.js?ver=3.23.4"
 		id="elementor-frontend-js"></script>
 	<script src="../wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.mince54.js?ver=3.19.3"

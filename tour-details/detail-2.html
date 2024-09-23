@@ -773,6 +773,34 @@
 			width: 200px;
 			height: 60px;
 		}
+        .goog-te-gadget-simple {
+        background-color: #347928 !important;  /* Red background */
+        border: 2px solid #347928 !important;  /* Navy blue border */
+        border-radius: 50px;  /* Makes the button round */
+        color: #fff !important;  /* White text */
+        font-size: 10pt !important;  /* Slightly larger font */
+        font-weight: bold !important;  /* Bold text */
+        display: inline-block;
+        padding: 5px 10px !important;  /* Padding for button feel */
+        cursor: pointer;
+        transition: background-color 0.3s ease;  /* Smooth hover transition */
+    }
+    
+    /* Remove Google Translate icon */
+    .goog-te-gadget-icon {
+        display: none !important;
+    }
+    
+    /* Style the text inside the button */
+    .goog-te-gadget-simple span {
+        color: #fff !important;  /* Ensure text inside the button is white */
+    }
+    
+    /* Add a hover effect to the button */
+    .goog-te-gadget-simple:hover {
+        background-color: rgb(64, 232, 97) !important;  /* Dark blue on hover */
+        color: #bf1e2e !important;  /* Red text on hover */
+    }
 	</style>
 </head>
 
@@ -902,15 +930,7 @@
 							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<div class="custom-language-select">
-										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
-											 alt="German Flag" class="flag-icon">
-										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
-											<option value="en">English</option>
-											<option value="ar">Arabic</option>
-											<option value="de" selected>Deutsch</option>
-										</select>
-									</div>
+									<div id="google_translate_element"></div>
 								</div>
 							</div>
 						</div>
@@ -974,8 +994,7 @@
 														font-size: 59px
 													}
 												</style>
-												<h2 class="elementor-heading-title elementor-size-default">Phi Phi
-													Islands, Krabi, Thailand</h2>
+												<h2 class="elementor-heading-title elementor-size-default">Kerala 10 days package</h2>
 											</div>
 										</div>
 										<div class="elementor-element elementor-element-0bc1c2f elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -1828,70 +1847,69 @@
 					data-id="938abb4" data-element_type="column">
 					<div class="elementor-widget-wrap elementor-element-populated">
 						<section data-particle_enable="false" data-particle-mobile-disabled="false"
-							class="elementor-section elementor-inner-section elementor-element elementor-element-c1b0e8a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-							data-id="c1b0e8a" data-element_type="section">
-							<div class="elementor-container elementor-column-gap-no">
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cb0c8f2"
-									data-id="cb0c8f2" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-04627c7 elementor-widget__width-initial animated-slow elementor-invisible elementor-widget elementor-widget-image"
-											data-id="04627c7" data-element_type="widget"
-											data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:20}"
-											data-widget_type="image.default">
-											<div class="elementor-widget-container">
-												<style>
-													/*! elementor - v3.23.0 - 05-08-2024 */
-													.elementor-widget-image {
-														text-align: center
-													}
+                            class="elementor-section elementor-inner-section elementor-element elementor-element-c1b0e8a elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                            data-id="c1b0e8a" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-no">
+                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cb0c8f2"
+                                    data-id="cb0c8f2" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-04627c7 elementor-widget__width-initial animated-slow elementor-invisible elementor-widget elementor-widget-image"
+                                            data-id="04627c7" data-element_type="widget"
+                                            data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:20}"
+                                            data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <style>
+                                                    /*! elementor - v3.23.0 - 05-08-2024 */
+                                                    .elementor-widget-image {
+                                                        text-align: center
+                                                    }
 
-													.elementor-widget-image a {
-														display: inline-block
-													}
+                                                    .elementor-widget-image a {
+                                                        display: inline-block
+                                                    }
 
-													.elementor-widget-image a img[src$=".svg"] {
-														width: 48px
-													}
+                                                    .elementor-widget-image a img[src$=".svg"] {
+                                                        width: 48px
+                                                    }
 
-													.elementor-widget-image img {
-														vertical-align: middle;
-														display: inline-block
-													}
-												</style> <img fetchpriority="high" decoding="async" width="650"
-													height="405"
-													src="../../../demo.assets.templately.com/agency/elementor/45/2024/03/12690a13-expo-details-image2.jpg"
-													class="attachment-full size-full wp-image-48 wp-stateless-item"
-													alt=""
-													srcset="https://demo.assets.templately.com/agency/elementor/45/2024/03/12690a13-expo-details-image2.jpg 650w, https://demo.assets.templately.com/agency/elementor/45/2024/03/12690a13-expo-details-image2-300x187.jpg 300w"
-													sizes="(max-width: 650px) 100vw, 650px" data-image-size="full"
-													data-stateless-media-bucket="demo.assets.templately.com"
-													data-stateless-media-name="agency/elementor/45/2024/03/12690a13-expo-details-image2.jpg" />
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-63e7f39"
-									data-id="63e7f39" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-3c1d47c elementor-widget__width-initial animated-slow elementor-invisible elementor-widget elementor-widget-image"
-											data-id="3c1d47c" data-element_type="widget"
-											data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:10}"
-											data-widget_type="image.default">
-											<div class="elementor-widget-container">
-												<img decoding="async" width="648" height="405"
-													src="../../../demo.assets.templately.com/agency/elementor/45/2024/03/376bb166-expo-details-image3.jpg"
-													class="attachment-full size-full wp-image-49 wp-stateless-item"
-													alt=""
-													srcset="https://demo.assets.templately.com/agency/elementor/45/2024/03/376bb166-expo-details-image3.jpg 648w, https://demo.assets.templately.com/agency/elementor/45/2024/03/376bb166-expo-details-image3-300x188.jpg 300w"
-													sizes="(max-width: 648px) 100vw, 648px" data-image-size="full"
-													data-stateless-media-bucket="demo.assets.templately.com"
-													data-stateless-media-name="agency/elementor/45/2024/03/376bb166-expo-details-image3.jpg" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
+                                                    .elementor-widget-image img {
+                                                        vertical-align: middle;
+                                                        display: inline-block
+                                                    }
+                                                </style> <br><img fetchpriority="high" decoding="async" 
+                                                    src="/images/Facebook Image post (1200x630) 3.jpg"
+                                                    class="attachment-full size-full wp-image-48 wp-stateless-item"
+                                                    alt=""
+                                                    
+                                                    sizes="(max-width: 650px) 100vw, 650px" data-image-size="full"
+                                                    data-stateless-media-bucket="demo.assets.templately.com"
+                                                    data-stateless-media-name="agency/elementor/45/2024/03/12690a13-expo-details-image2.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-63e7f39"
+                                    data-id="63e7f39" data-element_type="column">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-3c1d47c elementor-widget__width-initial animated-slow elementor-invisible elementor-widget elementor-widget-image"
+                                            data-id="3c1d47c" data-element_type="widget"
+                                            data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;,&quot;_animation_delay&quot;:10}"
+                                            data-widget_type="image.default">
+                                            <div class="elementor-widget-container">
+                                                <img decoding="async"
+                                                    src="../images/Facebook Image post (1200x630).jpg"
+                                                    class="attachment-full size-full wp-image-49 wp-stateless-item"
+                                                    alt=""
+                                                   
+                                                    sizes="(max-width: 648px) 100vw, 648px" data-image-size="full"
+                                                    data-stateless-media-bucket="demo.assets.templately.com"
+                                                    data-stateless-media-name="agency/elementor/45/2024/03/376bb166-expo-details-image3.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 					</div>
 				</div>
 			</div>
@@ -3025,97 +3043,123 @@
 								</div>
 							</div>
 						</section>
-						<section data-particle_enable="false" data-particle-mobile-disabled="false"
-							class="elementor-section elementor-inner-section elementor-element elementor-element-ce42615 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-							data-id="ce42615" data-element_type="section">
-							<div class="elementor-container elementor-column-gap-no">
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b77cd2a"
-									data-id="b77cd2a" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-bb2f1b8 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-											data-id="bb2f1b8" data-element_type="widget"
-											data-widget_type="icon-list.default">
-											<div class="elementor-widget-container">
-												<ul class="elementor-icon-list-items">
-													<li class="elementor-icon-list-item">
-														<span class="elementor-icon-list-icon">
-															<svg aria-hidden="true"
-																class="e-font-icon-svg e-fas-minus-circle"
-																viewBox="0 0 512 512"
-																xmlns="http://www.w3.org/2000/svg">
-																<path
-																	d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z">
-																</path>
-															</svg> </span>
-														<span class="elementor-icon-list-text">Package Excluded</span>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-052d841"
-									data-id="052d841" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-92bb0a5 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
-											data-id="92bb0a5" data-element_type="widget"
-											data-widget_type="icon-list.default">
-											<div class="elementor-widget-container">
-												<ul class="elementor-icon-list-items">
-													<li class="elementor-icon-list-item">
-														<a href="#">
+                        <section data-particle_enable="false" data-particle-mobile-disabled="false"
+                        class="elementor-section elementor-inner-section elementor-element elementor-element-ce42615 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
+                        data-id="ce42615" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b77cd2a"
+                                data-id="b77cd2a" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-bb2f1b8 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                        data-id="bb2f1b8" data-element_type="widget"
+                                        data-widget_type="icon-list.default">
+                                        <div class="elementor-widget-container">
+                                            <ul class="elementor-icon-list-items">
+                                                <li class="elementor-icon-list-item">
+                                                    <span class="elementor-icon-list-icon">
+                                                        <svg aria-hidden="true"
+                                                            class="e-font-icon-svg e-fas-minus-circle"
+                                                            viewBox="0 0 512 512"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z">
+                                                            </path>
+                                                        </svg> </span>
+                                                    <span class="elementor-icon-list-text">Package Excluded</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-052d841"
+                                data-id="052d841" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-92bb0a5 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                        data-id="92bb0a5" data-element_type="widget"
+                                        data-widget_type="icon-list.default">
+                                        <div class="elementor-widget-container">
+                                            <ul class="elementor-icon-list-items">
+                                                <li class="elementor-icon-list-item">
+                                                    <a href="#">
 
-															<span class="elementor-icon-list-icon">
-																<svg aria-hidden="true"
-																	class="e-font-icon-svg e-fas-times"
-																	viewBox="0 0 352 512"
-																	xmlns="http://www.w3.org/2000/svg">
-																	<path
-																		d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
-																	</path>
-																</svg> </span>
-															<span class="elementor-icon-list-text">Air Fares</span>
-														</a>
-													</li>
-													<li class="elementor-icon-list-item">
-														<a href="#">
+                                                        <span class="elementor-icon-list-icon">
+                                                            <svg aria-hidden="true"
+                                                                class="e-font-icon-svg e-fas-times"
+                                                                viewBox="0 0 352 512"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                                                                </path>
+                                                            </svg> </span>
+                                                        <span class="elementor-icon-list-text">Air Fares</span>
+                                                    </a>
+                                                </li>
+                                                <li class="elementor-icon-list-item">
+                                                    <a href="#">
 
-															<span class="elementor-icon-list-icon">
-																<svg aria-hidden="true"
-																	class="e-font-icon-svg e-fas-times"
-																	viewBox="0 0 352 512"
-																	xmlns="http://www.w3.org/2000/svg">
-																	<path
-																		d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
-																	</path>
-																</svg> </span>
-															<span class="elementor-icon-list-text">Any Personal
-																Expances</span>
-														</a>
-													</li>
-													<li class="elementor-icon-list-item">
-														<a href="#">
+                                                        <span class="elementor-icon-list-icon">
+                                                            <svg aria-hidden="true"
+                                                                class="e-font-icon-svg e-fas-times"
+                                                                viewBox="0 0 352 512"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                                                                </path>
+                                                            </svg> </span>
+                                                        <span class="elementor-icon-list-text">Any Personal
+                                                            Expense</span>
+                                                    </a>
+                                                </li>
+                                                <li class="elementor-icon-list-item">
+                                                    <a href="#">
 
-															<span class="elementor-icon-list-icon">
-																<svg aria-hidden="true"
-																	class="e-font-icon-svg e-fas-times"
-																	viewBox="0 0 352 512"
-																	xmlns="http://www.w3.org/2000/svg">
-																	<path
-																		d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
-																	</path>
-																</svg> </span>
-															<span class="elementor-icon-list-text">Laundry or phone
-																calls</span>
-														</a>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
+                                                        <span class="elementor-icon-list-icon">
+                                                            <svg aria-hidden="true"
+                                                                class="e-font-icon-svg e-fas-times"
+                                                                viewBox="0 0 352 512"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                                                                </path>
+                                                            </svg> </span>
+                                                        <span class="elementor-icon-list-text">Laundry</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-92bb0a5 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
+                                    data-id="92bb0a5" data-element_type="widget"
+                                    data-widget_type="icon-list.default">
+                                    <div class="elementor-widget-container">
+                                        
+                                           
+
+                                                    
+                                            </li>
+                                            <li class="elementor-icon-list-item">
+                                                <a href="#">
+
+                                                    <span class="elementor-icon-list-icon">
+                                                        <svg aria-hidden="true"
+                                                            class="e-font-icon-svg e-fas-times"
+                                                            viewBox="0 0 352 512"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z">
+                                                            </path>
+                                                        </svg> </span>
+                                                    <span class="elementor-icon-list-text">Visa</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 					</div>
 				</div>
 			</div>
@@ -3922,6 +3966,28 @@
 	<script id="elementor-frontend-js-before">
 		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.4", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/agency.elementor.templately.com\/explorely\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/agency.elementor.templately.com\/explorely\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "9194cbc32a" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "logo", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 145, "title": "Tour%20Details%20%E2%80%93%20ExploreLy%20", "excerpt": "", "featuredImage": false } };
 	</script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<script src="../wp-content/plugins/elementor/assets/js/frontend.mind5d5.js?ver=3.23.4"
 		id="elementor-frontend-js"></script>
 	<script src="../wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.mince54.js?ver=3.19.3"

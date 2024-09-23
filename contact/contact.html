@@ -774,6 +774,34 @@
 			width: 200px;
 			height: 60px;
 		}
+		.goog-te-gadget-simple {
+        background-color: #347928 !important;  /* Red background */
+        border: 2px solid #347928 !important;  /* Navy blue border */
+        border-radius: 50px;  /* Makes the button round */
+        color: #fff !important;  /* White text */
+        font-size: 10pt !important;  /* Slightly larger font */
+        font-weight: bold !important;  /* Bold text */
+        display: inline-block;
+        padding: 5px 10px !important;  /* Padding for button feel */
+        cursor: pointer;
+        transition: background-color 0.3s ease;  /* Smooth hover transition */
+    }
+    
+    /* Remove Google Translate icon */
+    .goog-te-gadget-icon {
+        display: none !important;
+    }
+    
+    /* Style the text inside the button */
+    .goog-te-gadget-simple span {
+        color: #fff !important;  /* Ensure text inside the button is white */
+    }
+    
+    /* Add a hover effect to the button */
+    .goog-te-gadget-simple:hover {
+        background-color: rgb(64, 232, 97) !important;  /* Dark blue on hover */
+        color: #bf1e2e !important;  /* Red text on hover */
+    }
 	</style>
 </head>
 
@@ -901,15 +929,7 @@
 							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<div class="custom-language-select">
-										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
-											 alt="German Flag" class="flag-icon">
-										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
-											<option value="en">English</option>
-											<option value="ar">Arabic</option>
-											<option value="de" selected>Deutsch</option>
-										</select>
-									</div>
+									<div id="google_translate_element"></div>
 								</div>
 							</div>
 						</div>
@@ -1052,233 +1072,7 @@
 								</div>
 							</div>
 						</section>
-						<!-- <section data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-section elementor-inner-section elementor-element elementor-element-9553f92 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9553f92" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-5c3de87" data-id="5c3de87" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-8ef57fc elementor-widget elementor-widget-eael-google-map" data-id="8ef57fc" data-element_type="widget" data-widget_type="eael-google-map.default">
-				<div class="elementor-widget-container">
-			
-					<div class="eael-google-map eael-google-map-basic" id="eael-google-map-8ef57fc" data-id="8ef57fc" data-map-center-lat="" data-map-center-lng="" data-map_type="basic" data-map_address_type="address" data-map_lat="28.948790" data-map_lng="-81.298843" data-map_addr="Marina Bay, Singapore" data-map_basic_marker_title="Google Map Title" data-map_basic_marker_content="Google map content" data-map_basic_marker_icon_enable="no" data-map_basic_marker_icon_width="32" data-map_basic_marker_icon_height="32" data-map_zoom="14" data-map_markers="%5B%7B%22eael_google_map_marker_title%22%3A%22Map+Marker+1%22%2C%22_id%22%3A%22fffe2f0%22%2C%22eael_google_map_marker_lat%22%3A%2228.948790%22%2C%22eael_google_map_marker_lng%22%3A%22-81.298843%22%2C%22eael_google_map_marker_content%22%3A%22Marker+Content.+You+can+put+html+here.%22%2C%22eael_google_map_marker_icon_color%22%3A%22%23e23a47%22%2C%22eael_google_map_marker_icon_enable%22%3A%22no%22%2C%22eael_google_map_marker_icon%22%3A%7B%22url%22%3A%22%22%2C%22id%22%3A%22%22%2C%22size%22%3A%22%22%7D%2C%22eael_google_map_marker_icon_width%22%3A%2232%22%2C%22eael_google_map_marker_icon_height%22%3A%2232%22%7D%5D" data-map_static_width="610" data-map_static_height="300" data-map_polylines="null" data-map_stroke_color="#e23a47" data-map_stroke_opacity="0.8" data-map_stroke_weight="4" data-map_stroke_fill_color="#e23a47" data-map_stroke_fill_opacity="0.4" data-map_theme="%22%5B%7B%5C%22featureType%5C%22%3A%5C%22administrative.locality%5C%22%2C%5C%22elementType%5C%22%3A%5C%22all%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%232c2e33%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A7%7D%2C%7B%5C%22lightness%5C%22%3A19%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22on%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22landscape%5C%22%2C%5C%22elementType%5C%22%3A%5C%22all%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23ffffff%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A-100%7D%2C%7B%5C%22lightness%5C%22%3A100%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22simplified%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22poi%5C%22%2C%5C%22elementType%5C%22%3A%5C%22all%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23ffffff%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A-100%7D%2C%7B%5C%22lightness%5C%22%3A100%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22off%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22road%5C%22%2C%5C%22elementType%5C%22%3A%5C%22geometry%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23bbc0c4%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A-93%7D%2C%7B%5C%22lightness%5C%22%3A31%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22simplified%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22road%5C%22%2C%5C%22elementType%5C%22%3A%5C%22labels%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23bbc0c4%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A-93%7D%2C%7B%5C%22lightness%5C%22%3A31%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22on%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22road.arterial%5C%22%2C%5C%22elementType%5C%22%3A%5C%22labels%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23bbc0c4%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A-93%7D%2C%7B%5C%22lightness%5C%22%3A-2%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22simplified%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22road.local%5C%22%2C%5C%22elementType%5C%22%3A%5C%22geometry%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23e9ebed%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A-90%7D%2C%7B%5C%22lightness%5C%22%3A-8%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22simplified%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22transit%5C%22%2C%5C%22elementType%5C%22%3A%5C%22all%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23e9ebed%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A10%7D%2C%7B%5C%22lightness%5C%22%3A69%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22on%5C%22%7D%5D%7D%2C%7B%5C%22featureType%5C%22%3A%5C%22water%5C%22%2C%5C%22elementType%5C%22%3A%5C%22all%5C%22%2C%5C%22stylers%5C%22%3A%5B%7B%5C%22hue%5C%22%3A%5C%22%23e9ebed%5C%22%7D%2C%7B%5C%22saturation%5C%22%3A-78%7D%2C%7B%5C%22lightness%5C%22%3A67%7D%2C%7B%5C%22visibility%5C%22%3A%5C%22simplified%5C%22%7D%5D%7D%5D%22" data-map_streeview_control="true" data-map_type_control="true" data-map_zoom_control="true" data-map_fullscreen_control="true" data-map_scroll_zoom="true"></div>
-				<div class="google-map-notice"></div>
-		</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section> -->
-						<section data-particle_enable="false" data-particle-mobile-disabled="false"
-							class="elementor-section elementor-inner-section elementor-element elementor-element-c27b1d5 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-							data-id="c27b1d5" data-element_type="section">
-							<div class="elementor-container elementor-column-gap-no">
-								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b318c67"
-									data-id="b318c67" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-a7a5889 elementor-widget elementor-widget-heading"
-											data-id="a7a5889" data-element_type="widget"
-											data-widget_type="heading.default">
-											<div class="elementor-widget-container">
-												<style>
-													/*! elementor - v3.23.0 - 05-08-2024 */
-													.elementor-heading-title {
-														padding: 0;
-														margin: 0;
-														line-height: 1
-													}
-
-													.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a {
-														color: inherit;
-														font-size: inherit;
-														line-height: inherit
-													}
-
-													.elementor-widget-heading .elementor-heading-title.elementor-size-small {
-														font-size: 15px
-													}
-
-													.elementor-widget-heading .elementor-heading-title.elementor-size-medium {
-														font-size: 19px
-													}
-
-													.elementor-widget-heading .elementor-heading-title.elementor-size-large {
-														font-size: 29px
-													}
-
-													.elementor-widget-heading .elementor-heading-title.elementor-size-xl {
-														font-size: 39px
-													}
-
-													.elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
-														font-size: 59px
-													}
-												</style>
-												<h2 class="elementor-heading-title elementor-size-default">Get In Touch
-												</h2>
-											</div>
-										</div>
-										<div class="elementor-element elementor-element-5b8ff15 elementor-widget elementor-widget-text-editor"
-											data-id="5b8ff15" data-element_type="widget"
-											data-widget_type="text-editor.default">
-											<div class="elementor-widget-container">
-												<style>
-													/*! elementor - v3.23.0 - 05-08-2024 */
-													.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
-														background-color: #69727d;
-														color: #fff
-													}
-
-													.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
-														color: #69727d;
-														border: 3px solid;
-														background-color: transparent
-													}
-
-													.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
-														margin-top: 8px
-													}
-
-													.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
-														width: 1em;
-														height: 1em
-													}
-
-													.elementor-widget-text-editor .elementor-drop-cap {
-														float: left;
-														text-align: center;
-														line-height: 1;
-														font-size: 50px
-													}
-
-													.elementor-widget-text-editor .elementor-drop-cap-letter {
-														display: inline-block
-													}
-												</style> Contact us for any of your queries. We are here to help you.
-											</div>
-										</div>
-										<div class="elementor-element elementor-element-19630b7 eael-fluentform-form-button-custom elementor-invisible elementor-widget elementor-widget-eael-fluentform"
-											data-id="19630b7" data-element_type="widget"
-											data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
-											data-widget_type="eael-fluentform.default">
-											<div class="elementor-widget-container">
-												<div
-													class="eael-contact-form eael-fluent-form-wrapper clearfix eael-contact-form-align-center">
-
-
-													<div
-														class='fluentform ff-default fluentform_wrapper_4 ffs_default_wrap'>
-														<form data-form_id="4" id="fluentform_4"
-															class="frm-fluent-form fluent_form_4 ff-el-form-top ff_form_instance_4_1 ff-form-loading ffs_default"
-															data-form_instance="ff_form_instance_4_1" method="POST">
-															<fieldset
-																style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
-																<legend class="ff_screen_reader_title"
-																	style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">
-																	Contact Form Demo</legend><input type='hidden'
-																	name='__fluent_form_embded_post_id'
-																	value='148' /><input type="hidden"
-																	id="_fluentform_4_fluentformnonce"
-																	name="_fluentform_4_fluentformnonce"
-																	value="bb0d854cf5" /><input type="hidden"
-																	name="_wp_http_referer"
-																	value="/explorely/contact/" />
-																<div data-type="name-element" data-name="names"
-																	class=" ff-field_container ff-name-field-wrapper">
-																	<div class='ff-t-container'>
-																		<div class='ff-t-cell '>
-																			<div class='ff-el-group'>
-																				<div
-																					class="ff-el-input--label asterisk-right">
-																					<label for='ff_4_names_first_name_'
-																						aria-label="First Name">First
-																						Name</label></div>
-																				<div class='ff-el-input--content'><input
-																						type="text"
-																						name="names[first_name]"
-																						id="ff_4_names_first_name_"
-																						class="ff-el-form-control"
-																						placeholder="First Name"
-																						aria-invalid="false"
-																						aria-required=false></div>
-																			</div>
-																		</div>
-																		<div class='ff-t-cell '>
-																			<div class='ff-el-group'>
-																				<div
-																					class="ff-el-input--label asterisk-right">
-																					<label for='ff_4_names_last_name_'
-																						aria-label="Last Name">Last
-																						Name</label></div>
-																				<div class='ff-el-input--content'><input
-																						type="text"
-																						name="names[last_name]"
-																						id="ff_4_names_last_name_"
-																						class="ff-el-form-control"
-																						placeholder="Last Name"
-																						aria-invalid="false"
-																						aria-required=false></div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class='ff-el-group'>
-																	<div
-																		class="ff-el-input--label ff-el-is-required asterisk-right">
-																		<label for='ff_4_email'
-																			aria-label="Email">Email</label></div>
-																	<div class='ff-el-input--content'><input
-																			type="email" name="email" id="ff_4_email"
-																			class="ff-el-form-control"
-																			placeholder="Email Address"
-																			data-name="email" aria-invalid="false"
-																			aria-required=true></div>
-																</div>
-																<div class='ff-el-group'>
-																	<div class="ff-el-input--label asterisk-right">
-																		<label for='ff_4_subject'
-																			aria-label="Subject">Subject</label></div>
-																	<div class='ff-el-input--content'><input type="text"
-																			name="subject" class="ff-el-form-control"
-																			placeholder="Subject" data-name="subject"
-																			id="ff_4_subject" aria-invalid="false"
-																			aria-required=false></div>
-																</div>
-																<div class='ff-el-group'>
-																	<div
-																		class="ff-el-input--label ff-el-is-required asterisk-right">
-																		<label for='ff_4_message'
-																			aria-label="Your Message">Your
-																			Message</label></div>
-																	<div class='ff-el-input--content'><textarea
-																			aria-invalid="false" aria-required=true
-																			name="message" id="ff_4_message"
-																			class="ff-el-form-control"
-																			placeholder="Your Message" rows="4" cols="2"
-																			data-name="message"></textarea></div>
-																</div>
-																<div
-																	class='ff-el-group ff-text-left ff_submit_btn_wrapper'>
-																	<button type="submit"
-																		class="ff-btn ff-btn-submit ff-btn-md ff_btn_style">Submit
-																		Form</button></div>
-															</fieldset>
-														</form>
-														<div id='fluentform_4_errors'
-															class='ff-errors-in-stack ff_form_instance_4_1 ff-form-loading_errors ff_form_instance_4_1_errors'>
-														</div>
-													</div>
-													<script type="text/javascript">
-														window.fluent_form_ff_form_instance_4_1 = { "id": "4", "settings": { "layout": { "labelPlacement": "top", "helpMessagePlacement": "with_label", "errorMessagePlacement": "inline", "cssClassName": "", "asteriskPlacement": "asterisk-right" }, "restrictions": { "denyEmptySubmission": { "enabled": false } } }, "form_instance": "ff_form_instance_4_1", "form_id_selector": "fluentform_4", "rules": { "names[first_name]": { "required": { "value": false, "message": "This field is required" } }, "names[middle_name]": { "required": { "value": false, "message": "This field is required" } }, "names[last_name]": { "required": { "value": false, "message": "This field is required" } }, "email": { "required": { "value": true, "message": "This field is required" }, "email": { "value": true, "message": "This field must contain a valid email" } }, "subject": { "required": { "value": false, "message": "This field is required" } }, "message": { "required": { "value": true, "message": "This field is required" } } } };
-													</script>
-												</div>
-
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
+						
 			</div>
 		</section>
 		<section data-particle_enable="false" data-particle-mobile-disabled="false"
@@ -1972,6 +1766,28 @@
 			}
 		});
 	</script>
+	<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 <!-- Mirrored from agency.elementor.templately.com/explorely/contact/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2024 10:31:23 GMT -->
