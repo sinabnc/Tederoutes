@@ -450,6 +450,34 @@
 			justify-content: center;
 			flex-wrap: wrap;
 		}
+		.goog-te-gadget-simple {
+        background-color: #347928 !important;  /* Red background */
+        border: 2px solid #347928 !important;  /* Navy blue border */
+        border-radius: 50px;  /* Makes the button round */
+        color: #fff !important;  /* White text */
+        font-size: 10pt !important;  /* Slightly larger font */
+        font-weight: bold !important;  /* Bold text */
+        display: inline-block;
+        padding: 5px 10px !important;  /* Padding for button feel */
+        cursor: pointer;
+        transition: background-color 0.3s ease;  /* Smooth hover transition */
+    }
+    
+    /* Remove Google Translate icon */
+    .goog-te-gadget-icon {
+        display: none !important;
+    }
+    
+    /* Style the text inside the button */
+    .goog-te-gadget-simple span {
+        color: #fff !important;  /* Ensure text inside the button is white */
+    }
+    
+    /* Add a hover effect to the button */
+    .goog-te-gadget-simple:hover {
+        background-color: #12223b !important;  /* Dark blue on hover */
+        color: #bf1e2e !important;  /* Red text on hover */
+    }
 	</style>
 	<style>
 		.custom-button {
@@ -493,6 +521,7 @@
 			color: green;
 			border: solid green 1px;
 		}
+		
 	</style>
 	<link rel='stylesheet' id='easyjobsowl-css'
 		href='wp-content/plugins/easyjobs/public/assets/vendor/owl.carousel.mine334.css?ver=2.4.15' media='all' />
@@ -1020,9 +1049,7 @@
 								<div class="elementor-button-wrapper">
 									<!-- Language Selector Button -->
 									<div class="translate-btn">
-										
-									  <div id="google_translate_element">hello</div>
-										
+										<div id="google_translate_element"></div>
 									</div>
 								</div>
 							</div>
@@ -3121,7 +3148,28 @@
 			filterCards('all');
 		};
 	</script>
-
+	<script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'en',  // Default language (English)
+            includedLanguages: 'en,ar',  // Only allow English and Arabic
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+          }, 'google_translate_element');
+        }
+      
+        function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var translateElement = document.querySelector(".goog-te-combo");
+      
+          if (translateElement) {
+            translateElement.value = selectedLanguage;  // Set the language value
+            translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
+          }
+        }
+      </script>
+      
+      <!-- Google Translate API -->
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<link rel='stylesheet' id='fluentform-elementor-widget-css'
 		href='wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widgetf08a.css?ver=5.2.0' media='all' />
 	<link rel='stylesheet' id='e-animations-css'
