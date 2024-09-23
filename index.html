@@ -29,9 +29,8 @@
 		href='wp-content/uploads/sites/45/elementor/css/post-1259966.css?ver=1723972176' media='all' />
 	<link rel='stylesheet' id='elementor-post-127-css'
 		href='wp-content/uploads/sites/45/elementor/css/post-1276a0d.css?ver=1723972119' media='all' />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<style id='wp-emoji-styles-inline-css'>
-		
 		img.wp-smiley,
 		img.emoji {
 			display: inline !important;
@@ -82,7 +81,7 @@
 			text-decoration: none
 		}
 	</style>
-	
+
 	<style id='global-styles-inline-css'>
 		:root {
 			--wp--preset--aspect-ratio--square: 1;
@@ -409,42 +408,92 @@
 		}
 	</style>
 	<style>
-	 .card {
-            background-color: #2d2d2d;
-            color: #fff;
-            border: none;
-            border-radius: 15px;
-            margin: 15px;
-        }
-        .card img {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-        }
-        .price {
-            font-size: 1.5rem;
-            color: #00ff00;
-        }
-        .reviews {
-            color: #ffc107;
-        }
-        .card-title {
-            margin-top: 10px;
-            font-size: 1.2rem;
-        }
-        .card-text {
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-        .btn {
-            border-radius: 25px;
-        }
-        /* Make the cards always side by side */
-        .row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-</style>
+		.card {
+			background-color: #2d2d2d;
+			color: #fff;
+			border: none;
+			border-radius: 15px;
+			margin: 15px;
+		}
+
+		.card img {
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+
+		.price {
+			font-size: 1.5rem;
+			color: #00ff00;
+		}
+
+		.reviews {
+			color: #ffc107;
+		}
+
+		.card-title {
+			margin-top: 10px;
+			font-size: 1.2rem;
+		}
+
+		.card-text {
+			font-size: 0.9rem;
+			color: #ccc;
+		}
+
+		.btn {
+			border-radius: 25px;
+		}
+
+		/* Make the cards always side by side */
+		.row {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	</style>
+	<style>
+		.custom-button {
+			background-color: #f5f5f5;
+			/* Light grey background */
+			color: #ff6b6b;
+			/* Light red text */
+			border: none;
+			/* No border */
+			padding: 10px 20px;
+			/* Padding for button size */
+			/* border-radius: 30px; Rounded edges */
+			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+			/* Subtle shadow */
+			font-size: 16px;
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+		}
+
+		.custom-button:hover {
+			transform: translateY(-2px);
+			/* Button rises slightly on hover */
+			box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+			/* Shadow intensifies on hover */
+		}
+
+		.elementor-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			/* Space between buttons */
+		}
+
+		/* Adjust text color and border for each button */
+		#luxuryBtn {
+			color: green;
+			border: solid green 1px;
+		}
+
+		#normalBtn {
+			color: green;
+			border: solid green 1px;
+		}
+	</style>
 	<link rel='stylesheet' id='easyjobsowl-css'
 		href='wp-content/plugins/easyjobs/public/assets/vendor/owl.carousel.mine334.css?ver=2.4.15' media='all' />
 	<link rel='stylesheet' id='easyjobs-css'
@@ -780,54 +829,57 @@
 			/* Adjusts the padding to reduce height and width */
 			display: inline-block;
 		}
-		.custom-button:hover{
+
+		.custom-button:hover {
 			background-color: white;
 		}
 
-		
-		
+
+
 		.custom-language-select {
-        display: flex;
-        align-items: center;
-        border: 1px solid #589442;
-        border-radius: 4px;
-        padding: 3px 7px;
-		margin-left: 15px;
-        width: fit-content;
-		
-    }
+			display: flex;
+			align-items: center;
+			border: 1px solid #589442;
+			border-radius: 4px;
+			padding: 3px 7px;
+			margin-left: 15px;
+			width: fit-content;
 
-    .flag-icon {
-        width: 20px;
-        height: 14px;
-        margin-right: 8px;
-    }
+		}
 
-    .custom-select {
-        border: none;
-        outline: none;
-        font-size: 14px;
-        background-color: transparent;
-        cursor: pointer;
-        appearance: none; /* Remove default dropdown arrow */
-    }
+		.flag-icon {
+			width: 20px;
+			height: 14px;
+			margin-right: 8px;
+		}
 
-    .custom-select:after {
-        content: "\25BC"; /* Add custom dropdown arrow */
-        font-size: 10px;
-        padding-left: 5px;
-    }
+		.custom-select {
+			border: none;
+			outline: none;
+			font-size: 14px;
+			background-color: transparent;
+			cursor: pointer;
+			appearance: none;
+			/* Remove default dropdown arrow */
+		}
 
-    /* Hide native dropdown arrow */
-    select::-ms-expand {
-        display: none;
-    }
-    
-    select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
+		.custom-select:after {
+			content: "\25BC";
+			/* Add custom dropdown arrow */
+			font-size: 10px;
+			padding-left: 5px;
+		}
+
+		/* Hide native dropdown arrow */
+		select::-ms-expand {
+			display: none;
+		}
+
+		select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
 	</style>
 </head>
 
@@ -963,25 +1015,38 @@
 					data-id="069a652" data-element_type="column">
 					<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
+							data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
+									<!-- Custom Language Selector -->
 									<div class="custom-language-select">
 										<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png"
-											 alt="German Flag" class="flag-icon">
-										<select id="language-select" onchange="changeLanguage()" class="custom-select"style="color:#fff;">
-											<option value="en">English</option>
-											<option value="ar">Arabic</option>
-											<option value="de" selected>Deutsch</option>
-										</select>
+											alt="German Flag" class="flag-icon" width="30px">
+										<!-- Google Translate Widget for English and Arabic -->
+										<div id="google_translate_element"></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
+				<!-- Google Translate Script -->
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+						new google.translate.TranslateElement({
+							pageLanguage: 'en',  // Set default language to English
+							includedLanguages: 'en,ar',  // Only English and Arabic
+							layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+						}, 'google_translate_element');
+					}
+				</script>
+				<script type="text/javascript"
+					src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+			</div>
+		</section>
 	</div>
 	</section>
 	</div>
@@ -1448,72 +1513,70 @@
 								</div>
 							</div>
 						</section>
-						<div class="elementor-section elementor-inner-section elementor-element elementor-element-9a665ab elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-							data-id="9a665ab" data-element_type="section">
-							<div class="elementor-container elementor-column-gap-no text-center">
-								<button id="luxuryBtn" class="filter-btn custom-button"style="color:green; border:solid green 1px;">Luxury</button>
-								<button id="normalBtn" class="filter-btn custom-button"style="color:green; border:solid green 1px;">Normal</button>
+						<!-- <div class="elementor-section elementor-inner-section elementor-element elementor-section-full_width elementor-section-height-default">
+							<div class="elementor-container text-center">
+								<button id="luxuryBtn" class="filter-btn custom-button" onclick="filterCards('luxury')">Luxury</button>
+								<button id="normalBtn" class="filter-btn custom-button" onclick="filterCards('normal')">Normal</button>
+								<button id="allBtn" class="filter-btn custom-button btn-active" onclick="filterCards('all')">All</button>
 							</div>
-						</div>
+						</div> -->
+
 						<!-- Blog Grid with Articles -->
 						<div class="container my-5">
 							<div class="row">
-								<!-- Card 1 -->
-								<div class="col-md-4">
+								<!-- Card 1 (Luxury) -->
+								<div class="col-md-4 filter-item luxury">
 									<div class="card">
-										<img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Maafushi, Maldives">
+										<img src="https://via.placeholder.com/300x200" class="card-img-top"
+											alt="Maafushi, Maldives">
 										<div class="card-body">
 											<h5 class="price">$300 / Per Person</h5>
-											
-											<h5 class="card-title">Luxury package(7)</h5>
-											
-											<a href="tour-details/detail.html" class="btn btn-outline-light">See Details</a>
+											<h5 class="card-title">Luxury package (7)</h5>
+											<a href="tour-details/detail.html" class="btn btn-outline-light">See
+												Details</a>
 										</div>
 									</div>
 								</div>
-					
-								<!-- Card 2 -->
-								<div class="col-md-4">
+
+								<!-- Card 2 (Normal) -->
+								<div class="col-md-4 filter-item normal">
 									<div class="card">
-										<img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Kashmir, Pakistan">
+										<img src="https://via.placeholder.com/300x200" class="card-img-top"
+											alt="Kashmir, Pakistan">
 										<div class="card-body">
 											<h5 class="price">$150 / Per Person</h5>
-											
-											<h5 class="card-title">Luxury package(10)</h5>
-											
-											<a href="tour-details/detail-2.html" class="btn btn-outline-light">See Details</a>
+											<h5 class="card-title">Normal package (10)</h5>
+											<a href="tour-details/detail-2.html" class="btn btn-outline-light">See
+												Details</a>
 										</div>
 									</div>
 								</div>
-					
-								<!-- Card 3 -->
-								<div class="col-md-4">
+
+								<!-- Card 3 (Luxury) -->
+								<div class="col-md-4 filter-item luxury">
 									<div class="card">
-										<img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Phi Phi Islands, Thailand">
+										<img src="https://via.placeholder.com/300x200" class="card-img-top"
+											alt="Phi Phi Islands, Thailand">
 										<div class="card-body">
 											<h5 class="price">$140 / Per Person</h5>
-											
-											<h5 class="card-title">Luxury package(14)</h5>
-											
-											<a href="tour-details/detail-1.html" class="btn btn-outline-light">See Details</a>
+											<h5 class="card-title">Luxury package (14)</h5>
+											<a href="tour-details/detail-1.html" class="btn btn-outline-light">See
+												Details</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<!-- Load More Button (Optional) -->
+						<!-- Load More Button -->
 						<div class="eael-load-more-button-wrap eael-force-hide">
 							<button class="eael-load-more-button" id="eael-load-more-btn-0d31711">
 								<span class="eael-btn-loader button__loader"></span>
 								<span class="eael_load_more_text">Load More</span>
 							</button>
 						</div>
-					</div>
-				</div>
-			</div>
 		</section>
-		
+
 		<section data-particle_enable="false" data-particle-mobile-disabled="false"
 			class="elementor-section elementor-top-section elementor-element elementor-element-2e590a7 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
 			data-id="2e590a7" data-element_type="section" id="about_us">
@@ -3204,21 +3267,42 @@
 		});
 
 		// Function to change language
-		function changeLanguage() {
-			const selectedLang = document.getElementById('language-select').value;
 
-			// Save selected language in local storage
-			localStorage.setItem('selectedLanguage', selectedLang);
-
-			// Redirect to respective language version of the site
-			if (selectedLang === 'en') {
-				window.location.href = '/en';  // Adjust based on your URL structure
-			} else if (selectedLang === 'ar') {
-				window.location.href = '/ar';
-			}
-		}
 
 	</script>
+
+	<script>
+		// JavaScript to handle filtering functionality
+		function filterCards(category) {
+			const items = document.querySelectorAll('.filter-item');
+			const buttons = document.querySelectorAll('.filter-btn');
+
+			// Remove active class from all buttons
+			buttons.forEach(button => button.classList.remove('btn-active'));
+
+			// Add active class to the clicked button
+			if (category === 'all') {
+				buttons[2].classList.add('btn-active');
+			} else {
+				document.getElementById(category + 'Btn').classList.add('btn-active');
+			}
+
+			// Show or hide cards based on the filter
+			items.forEach(item => {
+				if (category === 'all' || item.classList.contains(category)) {
+					item.style.display = 'block';
+				} else {
+					item.style.display = 'none';
+				}
+			});
+		}
+
+		// Initial filter to show all cards
+		window.onload = function () {
+			filterCards('all');
+		};
+	</script>
+
 	<link rel='stylesheet' id='fluentform-elementor-widget-css'
 		href='wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widgetf08a.css?ver=5.2.0' media='all' />
 	<link rel='stylesheet' id='e-animations-css'
@@ -3263,6 +3347,8 @@
 	<script id="elementor-pro-frontend-js-before">
 		var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/agency.elementor.templately.com\/explorely\/wp-admin\/admin-ajax.php", "nonce": "a6fa5d81d7", "urls": { "assets": "https:\/\/agency.elementor.templately.com\/explorely\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/agency.elementor.templately.com\/explorely\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } }, "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/agency.elementor.templately.com\/explorely\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" } };
 	</script>
+	<script type="text/javascript"
+		src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 	<script src="wp-content/plugins/elementor-pro/assets/js/frontend.mince54.js?ver=3.19.3"
 		id="elementor-pro-frontend-js"></script>
 	<script src="wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2"
@@ -3271,7 +3357,7 @@
 	<script id="elementor-frontend-js-before">
 		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.23.4", "is_static": false, "experimentalFeatures": { "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "container_grid": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "theme_builder_v2": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/agency.elementor.templately.com\/explorely\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/agency.elementor.templately.com\/explorely\/wp-admin\/admin-ajax.php" }, "nonces": { "floatingButtonsClickTracking": "9194cbc32a" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "logo", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 136, "title": "ExploreLy%20%20%E2%80%93%20%20Travel%20Agency%20Website%20For%20Elementor", "excerpt": "", "featuredImage": false } };
 	</script>
-	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="wp-content/plugins/elementor/assets/js/frontend.mind5d5.js?ver=3.23.4"
 		id="elementor-frontend-js"></script>
 	<script src="wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.mince54.js?ver=3.19.3"
