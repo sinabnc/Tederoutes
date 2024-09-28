@@ -728,80 +728,96 @@
 		.my-float {
 			margin-top: 16px;
 		}
+
 		.custom-language-select {
-        display: flex;
-        align-items: center;
-        border: 1px solid #589442;
-        border-radius: 4px;
-        padding: 3px 7px;
-		margin-left: 15px;
-        width: fit-content;
-		
-    }
+			display: flex;
+			align-items: center;
+			border: 1px solid #589442;
+			border-radius: 4px;
+			padding: 3px 7px;
+			margin-left: 15px;
+			width: fit-content;
 
-    .flag-icon {
-        width: 20px;
-        height: 14px;
-        margin-right: 8px;
-    }
+		}
 
-    .custom-select {
-        border: none;
-        outline: none;
-        font-size: 14px;
-        background-color: transparent;
-        cursor: pointer;
-        appearance: none; /* Remove default dropdown arrow */
-    }
+		.flag-icon {
+			width: 20px;
+			height: 14px;
+			margin-right: 8px;
+		}
 
-    .custom-select:after {
-        content: "\25BC"; /* Add custom dropdown arrow */
-        font-size: 10px;
-        padding-left: 5px;
-    }
+		.custom-select {
+			border: none;
+			outline: none;
+			font-size: 14px;
+			background-color: transparent;
+			cursor: pointer;
+			appearance: none;
+			/* Remove default dropdown arrow */
+		}
 
-    /* Hide native dropdown arrow */
-    select::-ms-expand {
-        display: none;
-    }
-    
-    select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
-	#logo-img {
+		.custom-select:after {
+			content: "\25BC";
+			/* Add custom dropdown arrow */
+			font-size: 10px;
+			padding-left: 5px;
+		}
+
+		/* Hide native dropdown arrow */
+		select::-ms-expand {
+			display: none;
+		}
+
+		select {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+
+		#logo-img {
 			width: 200px;
 			height: 60px;
-	}
-    .goog-te-gadget-simple {
-        background-color: #347928 !important;  /* Red background */
-        border: 2px solid #347928 !important;  /* Navy blue border */
-        border-radius: 50px;  /* Makes the button round */
-        color: #fff !important;  /* White text */
-        font-size: 10pt !important;  /* Slightly larger font */
-        font-weight: bold !important;  /* Bold text */
-        display: inline-block;
-        padding: 5px 10px !important;  /* Padding for button feel */
-        cursor: pointer;
-        transition: background-color 0.3s ease;  /* Smooth hover transition */
-    }
-    /* Remove Google Translate icon */
-    .goog-te-gadget-icon {
-        display: none !important;
-    }
-    
-    /* Style the text inside the button */
-    .goog-te-gadget-simple span {
-        color: #fff !important;  /* Ensure text inside the button is white */
-    }
-    
-    /* Add a hover effect to the button */
-    .goog-te-gadget-simple:hover {
-        background-color: rgb(64, 232, 97) !important;  /* Dark blue on hover */
-        color: #bf1e2e !important;  /* Red text on hover */
-    }
-		
+		}
+
+		.goog-te-gadget-simple {
+			background-color: #347928 !important;
+			/* Red background */
+			border: 2px solid #347928 !important;
+			/* Navy blue border */
+			border-radius: 50px;
+			/* Makes the button round */
+			color: #fff !important;
+			/* White text */
+			font-size: 10pt !important;
+			/* Slightly larger font */
+			font-weight: bold !important;
+			/* Bold text */
+			display: inline-block;
+			padding: 5px 10px !important;
+			/* Padding for button feel */
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			/* Smooth hover transition */
+		}
+
+		/* Remove Google Translate icon */
+		.goog-te-gadget-icon {
+			display: none !important;
+		}
+
+		/* Style the text inside the button */
+		.goog-te-gadget-simple span {
+			color: #fff !important;
+			/* Ensure text inside the button is white */
+		}
+
+		/* Add a hover effect to the button */
+		.goog-te-gadget-simple:hover {
+			background-color: rgb(64, 232, 97) !important;
+			/* Dark blue on hover */
+			color: #bf1e2e !important;
+			/* Red text on hover */
+		}
 	</style>
 </head>
 
@@ -821,7 +837,8 @@
 						<div class="elementor-element elementor-element-7d7543a elementor-widget elementor-widget-tl-site-logo"
 							data-id="7d7543a" data-element_type="widget" data-widget_type="tl-site-logo.default">
 							<div class="elementor-widget-container">
-								<a href=""><img id="logo-img" src="/images/IMG_9426 1 (2).png" title="86060095-explorely-logo.png" alt=""
+								<a href=""><img id="logo-img" src="/images/IMG_9426 1 (2).png"
+										title="86060095-explorely-logo.png" alt=""
 										class="attachment-full size-full wp-image-7" loading="lazy" /></a>
 							</div>
 						</div>
@@ -842,12 +859,14 @@
 									<ul id="menu-1-a48f476" class="elementor-nav-menu">
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-160">
-											<a href="../index.html" class="elementor-item">Home</a></li>
+											<a href="../index.html" class="elementor-item">Home</a>
+										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-139 current_page_item menu-item-165">
 											<a href="index.html" aria-current="page"
-												class="elementor-item elementor-item-active">Destination</a></li>
-										<li
+												class="elementor-item elementor-item-active">Destination</a>
+										</li>
+										<!-- <li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164">
 											<a href="/tour-packages/package.html" class="elementor-item">Tour
 												Packages</a>
@@ -855,17 +874,19 @@
 												<li
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
 													<a href="/tour-details/detail.html" class="elementor-sub-item">Tour
-														Details</a></li>
+														Details</a>
+												</li>
 											</ul>
-										</li>
-										<li
+										</li> -->
+										<!-- <li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-163">
 											<a href="/blog/blog.html" class="elementor-item">about</a>
 
-										</li>
+										</li> -->
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
-											<a href="/contact/contact.html" class="elementor-item">Contact</a></li>
+											<a href="/contact/contact.html" class="elementor-item">Contact</a>
+										</li>
 									</ul>
 								</nav>
 								<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle"
@@ -889,12 +910,14 @@
 									<ul id="menu-2-a48f476" class="elementor-nav-menu">
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-160">
-											<a href="../index.html" class="elementor-item" tabindex="-1">Home</a></li>
+											<a href="../index.html" class="elementor-item" tabindex="-1">Home</a>
+										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-139 current_page_item menu-item-165">
 											<a href="index.html" aria-current="page"
 												class="elementor-item elementor-item-active"
-												tabindex="-1">Destination</a></li>
+												tabindex="-1">Destination</a>
+										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-164">
 											<a href="../tour-packages/index.html" class="elementor-item"
@@ -903,7 +926,8 @@
 												<li
 													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161">
 													<a href="../tour-details/index.html" class="elementor-sub-item"
-														tabindex="-1">Tour Details</a></li>
+														tabindex="-1">Tour Details</a>
+												</li>
 											</ul>
 										</li>
 										<li
@@ -913,13 +937,15 @@
 												<li
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-166">
 													<a href="#" class="elementor-sub-item elementor-item-anchor"
-														tabindex="-1">Blog Details</a></li>
+														tabindex="-1">Blog Details</a>
+												</li>
 											</ul>
 										</li>
 										<li
 											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162">
 											<a href="../contact/index.html" class="elementor-item"
-												tabindex="-1">Contact</a></li>
+												tabindex="-1">Contact</a>
+										</li>
 									</ul>
 								</nav>
 							</div>
@@ -930,7 +956,7 @@
 					data-id="069a652" data-element_type="column">
 					<div class="elementor-widget-wrap elementor-element-populated">
 						<div class="elementor-element elementor-element-5763aee elementor-align-right elementor-widget elementor-widget-button"
-							 data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
+							data-id="5763aee" data-element_type="widget" data-widget_type="button.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
 									<div id="google_translate_element"></div>
@@ -1994,28 +2020,29 @@
 		id="elementor-frontend-js"></script>
 	<script src="../wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.mince54.js?ver=3.19.3"
 		id="pro-preloaded-elements-handlers-js"></script>
-		<script type="text/javascript">
-			function googleTranslateElementInit() {
-			  new google.translate.TranslateElement({
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
 				pageLanguage: 'en',  // Default language (English)
 				includedLanguages: 'en,ar',  // Only allow English and Arabic
 				layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-			  }, 'google_translate_element');
-			}
-		  
-			function changeLanguage() {
-			  var selectedLanguage = document.getElementById("languageSelector").value;
-			  var translateElement = document.querySelector(".goog-te-combo");
-		  
-			  if (translateElement) {
+			}, 'google_translate_element');
+		}
+
+		function changeLanguage() {
+			var selectedLanguage = document.getElementById("languageSelector").value;
+			var translateElement = document.querySelector(".goog-te-combo");
+
+			if (translateElement) {
 				translateElement.value = selectedLanguage;  // Set the language value
 				translateElement.dispatchEvent(new Event('change'));  // Trigger the change event
-			  }
 			}
-		  </script>
-		  
-		  <!-- Google Translate API -->
-		  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		}
+	</script>
+
+	<!-- Google Translate API -->
+	<script type="text/javascript"
+		src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 <!-- Mirrored from agency.elementor.templately.com/explorely/destination/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Sep 2024 10:31:01 GMT -->
